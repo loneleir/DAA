@@ -1,0 +1,25 @@
+@startuml
+start
+:Login;
+if (Peran Pengguna?) then (Guru)
+  :Tampilkan Data Pribadi;
+  :Akses Ditolak?; 
+  stop
+else (Admin)
+  :Pilih Aksi;
+  if (Tambah Data?) then (yes)
+    :Proses Tambah Data;
+  else (no)
+    if (Ubah Data?) then (yes)
+      :Proses Ubah Data;
+    else (no)
+      if (Hapus Data?) then (yes)
+        :Proses Hapus Data;
+      else (no)
+        :Melihat Daftar Guru;
+      endif
+    endif
+  endif
+endif
+stop
+@enduml

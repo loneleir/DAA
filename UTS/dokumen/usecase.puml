@@ -1,0 +1,22 @@
+@startuml
+
+actor Guru
+actor Admin
+
+usecase "Melihat Data Pribadi" as UC1
+usecase "Login" as UC2
+usecase "Pengelolaan Data Guru" as UC3
+usecase "Menambah Data Guru" as UC4
+usecase "Mengubah Data Guru" as UC5
+usecase "Menghapus Data Guru" as UC6
+usecase "Melihat Daftar Guru" as UC7
+
+Guru -- UC1
+Admin -- UC2
+Admin -- UC3
+Admin -- UC4
+Admin -- UC5
+Admin -- UC6
+Admin -- UC7
+
+@enduml
