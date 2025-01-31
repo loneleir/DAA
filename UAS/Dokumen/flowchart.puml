@@ -1,0 +1,20 @@
+@startuml
+start
+
+:Pengguna/Admin mengakses halaman utama;
+
+if (Admin?) then (yes)
+    :Admin login ke sistem;
+    if (Login berhasil?) then (yes)
+        :Admin menambah, mengedit, atau menghapus data lukisan;
+    else (no)
+        :Admin gagal login;
+    endif
+else (no)
+    :Pengguna melihat daftar lukisan berdasarkan tahun pembuatan;
+    :Pengguna memilih lukisan dari daftar;
+    :Pengguna melihat detail lukisan;
+endif
+
+stop
+@enduml

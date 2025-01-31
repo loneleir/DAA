@@ -1,0 +1,12 @@
+@startuml
+actor Admin
+actor Pengguna
+
+Pengguna -- (Lihat Daftar Lukisan)
+Pengguna -- (Lihat Detail Lukisan)
+
+Admin -- (Login)
+Admin -- (Kelola Data Lukisan)
+
+(Lihat Daftar Lukisan) .> (Lihat Detail Lukisan) : <<include>>
+@enduml
